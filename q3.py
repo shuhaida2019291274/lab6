@@ -32,10 +32,10 @@ def process_start(s_sock):
                 answer = ('error...')
 
             sendAns = (str(opt)+ '['+ str(n) + ']= ' + str(ans))
-            print ('\nCalculation successfully Done!')
+            print ('\nCalculation is done!!!')
         except:
-            print ('Connection Terminated')
-            sendAns = ('Connection Terminated')
+            print ('Connection with client terminated...')
+            sendAns = ('Connection with client terminated...')
 
         if not data:
             break
@@ -46,7 +46,7 @@ def process_start(s_sock):
 if __name__ == '__main__':
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.bind(("",8888))
-    print("listening...")
+    print("Server is listening...")
     s.listen(3)
     try:
         while True:
@@ -61,7 +61,7 @@ if __name__ == '__main__':
                 print('Socket error')
 
     except Exception as e:
-                print("an exception occurred!")
+                print("An exception occurred!")
                 print(e)
                 sys.exit(1)
     finally:
