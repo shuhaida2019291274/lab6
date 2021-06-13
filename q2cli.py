@@ -1,7 +1,7 @@
 import socket
 
 ClientSocket = socket.socket()
-host = 'Your Server IP'
+host = '192.168.56.103'
 port = 8888
 
 print('Waiting for connection')
